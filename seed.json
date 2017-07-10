@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "library": "okhttp3",
+      "rules": "-dontwarn okio.** \n- dontwarn javax.annotation.Nullable \n - dontwarn javax.annotation.ParametersAreNonnullByDefault "
+    },
+    {
+      "library": "gson",
+      "rules": "-dontwarn okio.** \n- dontwarn javax.annotation.Nullable \n- dontwarn javax.annotation.ParametersAreNonnullByDefault - keepclasseswithmembers class * { "
+    }
+  ],
+  "model": "Rule"
+}

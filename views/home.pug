@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  div.header
+    h1 Proguard, please
+    p.lead Curated list of proguard rules of popular android libraries.
+  hr
+  .row
+    .col
+    form.form-inline
+    .form-group
+      label(for='library') Proguard rules for Library?
+      input#library.form-control(type='text', placeholder='retrofit' value='retrofit')
+    button#search.btn.btn-default(type='submit') Search
+    br
+    .form-group
+      textarea#rules 
+    button.btn(data-clipboard-action='copy', data-clipboard-target='#rules') Copy
+
