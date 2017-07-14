@@ -1,12 +1,27 @@
 {
   "data": [
     {
-      "library": "okhttp3",
-      "rules": "-dontwarn okio.** \n- dontwarn javax.annotation.Nullable \n - dontwarn javax.annotation.ParametersAreNonnullByDefault "
+      "library": "application",
+      "rules": "-keepclassmembers class **.beans.** { *; }\n -keepclassmembers class **.model.** { *; }",
+      "alias_name": "app"
+    },
+    {
+      "library": "okhttp",
+      "version": "3",
+      "rules": "-dontwarn okio.** \n- dontwarn javax.annotation.Nullable \n - dontwarn javax.annotation.ParametersAreNonnullByDefault ",
+      "alias_name": "okhttp3"
     },
     {
       "library": "gson",
-      "rules": "-dontwarn okio.** \n- dontwarn javax.annotation.Nullable \n- dontwarn javax.annotation.ParametersAreNonnullByDefault - keepclasseswithmembers class * { "
+      "version": "2.8.1",
+      "rules": "-keepattributes Signature \n-keepattributes *Annotation* \n-keep class sun.misc.Unsafe { *; } \n -keep class com.google.gson.examples.android.model.** { *; } \n -keep class * implements com.google.gson.TypeAdapterFactory \n -keep class * implements com.google.gson.JsonSerializer \n -keep class * implements com.google.gson.JsonDeserializer",
+      "alias_name": "gson 2.8"
+    },
+    {
+      "library": "butterknife",
+      "version": "8.7",
+      "rules": "-keep class butterknife.** { *; } \n-dontwarn butterknife.internal.** \n-keep class **_ViewBinding { *; } \n-keepclasseswithmembernames class * { @butterknife.* <fields>; } \n -keepclasseswithmembernames class * { @butterknife.* <methods>; }",
+      "alias_name": "butterknife 8"
     }
   ],
   "model": "Rule"
