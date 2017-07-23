@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const ruleSchema = new mongoose.Schema({
-	'library': String,
-	'version': String,
-	'rules': String,
-	'aliasName': String
+	library: String,
+	version: String,
+	rules: String,
+	aliasName: String
 }, {
 	timestamps: true
 });

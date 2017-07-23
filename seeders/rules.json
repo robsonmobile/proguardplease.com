@@ -1,0 +1,81 @@
+[{
+  "library": "application",
+  "rules": "-keepclassmembers class **.beans.** { *; }\n -keepclassmembers class **.model.** { *; }",
+  "version": "latest",
+  "aliasName": "app"
+}, {
+  "library": "okhttp",
+  "version": "3",
+  "rules": "-dontwarn okio.** \n- dontwarn javax.annotation.Nullable \n - dontwarn javax.annotation.ParametersAreNonnullByDefault ",
+  "aliasName": "okhttp3"
+}, {
+  "library": "gson",
+  "version": "2.8.1",
+  "rules": "-keepattributes Signature \n-keepattributes *Annotation* \n-keep class sun.misc.Unsafe { *; } \n -keep class com.google.gson.examples.android.model.** { *; } \n -keep class * implements com.google.gson.TypeAdapterFactory \n -keep class * implements com.google.gson.JsonSerializer \n -keep class * implements com.google.gson.JsonDeserializer",
+  "aliasName": "gson 2.8"
+}, {
+  "library": "retrofit",
+  "version": "2.3.0",
+  "rules": "-dontwarn retrofit2.** \n-keep class retrofit2.** { *; } \n -keepattributes Signature \n -keepattributes Exceptions \n -keepclasseswithmembers class * {\n@retrofit2.http.* <methods>;\n}",
+  "aliasName": "retrofit 2.3"
+}, {
+  "library": "butterknife",
+  "version": "8.7",
+  "rules": "-keep class butterknife.** { *; } \n-dontwarn butterknife.internal.** \n-keep class **_ViewBinding { *; } \n-keepclasseswithmembernames class * { @butterknife.* <fields>; } \n -keepclasseswithmembernames class * { @butterknife.* <methods>; }",
+  "aliasName": "butterknife 8"
+}, {
+  "library": "greenbot eventbus",
+  "version": "3.0.0",
+  "rules": "-keepattributes *Annotation* \n-keepclassmembers class ** {\n@org.greenrobot.eventbus.Subscribe <methods>;\n} \n-keep enum org.greenrobot.eventbus.ThreadMode { *; } \n # Only required if you use AsyncExecutor\n-keepclassmembers class * extends org.greenrobot.eventbus.util.ThrowableFailureEvent {\n<init>(java.lang.Throwable);\n}",
+  "aliasName": "eventbus 3"
+}, {
+  "library": "calligraphy",
+  "version": "2.3.0",
+  "rules": "-keep class uk.co.chrisjenx.calligraphy.* { *; }\n-keep class uk.co.chrisjenx.calligraphy.*$* { *; }}",
+  "aliasName": "calligraphy 2"
+}, {
+  "library": "glide",
+  "version": "4.0.0-RC1",
+  "rules": "-keep public class * implements com.bumptech.glide.module.GlideModule \n -keep public class * extends com.bumptech.glide.AppGlideModule \n -keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** { \n **[] $VALUES; \n public *; \n}",
+  "aliasName": "glide 4"
+}, {
+  "library": "picasso",
+  "version": "2.3.0",
+  "rules": "-keep class uk.co.chrisjenx.calligraphy.* { *; }\n-keep class uk.co.chrisjenx.calligraphy.*$* { *; }}",
+  "aliasName": "calligraphy 2"
+}, {
+  "library": "picasso transformation",
+  "version": "2.3.0",
+  "rules": "-keep class uk.co.chrisjenx.calligraphy.* { *; }\n-keep class uk.co.chrisjenx.calligraphy.*$* { *; }}",
+  "aliasName": "calligraphy 2"
+}, {
+  "library": "rxjava",
+  "version": "1.3.0",
+  "rules": "-dontwarn sun.misc.** \n -keepclassmembers class rx.internal.util.unsafe.*ArrayQueue*Field* { \nlong producerIndex;\nlong consumerIndex;\n} \n-keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueProducerNodeRef {\nrx.internal.util.atomic.LinkedQueueNode producerNode;\n}\n-keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueConsumerNodeRef {\nrx.internal.util.atomic.LinkedQueueNode consumerNode;\n} \n -dontnote rx.internal.util.PlatformDependent \n #Note : You don't need proguard rules for RxJava 2 as discussed here : https://github.com/artem-zinnatullin/RxJavaProGuardRules/issues/44",
+  "aliasName": "rxjava 1"
+}, {
+  "library": "timber",
+  "version": "4.5.1",
+  "rules": "-dontwarn org.jetbrains.annotations.**",
+  "aliasName": "timber 4"
+}, {
+  "library": "crashlytics",
+  "version": "2.6.8",
+  "rules": "-keepattributes *Annotation* \n-keepattributes SourceFile,LineNumberTable\n-keep public class * extends java.lang.Exception\n-keep class com.crashlytics.** { *; }\n-dontwarn com.crashlytics.**",
+  "aliasName": "crashlytics 2"
+}, {
+  "library": "retrolambda",
+  "version": "2.5.1",
+  "rules": "-dontwarn java.lang.invoke.*",
+  "aliasName": "retrolambda 2"
+}, {
+  "library": "parceler",
+  "version": "1.1.9",
+  "rules": "-keep interface org.parceler.Parcel\n-keep @org.parceler.Parcel class * { *; }\n-keep class **$$Parcelable { *; }",
+  "aliasName": "parceler 1.1"
+}, {
+  "library": "leakcanary",
+  "version": "1.5.1",
+  "rules": "-dontwarn com.squareup.haha.guava.**\n-dontwarn com.squareup.haha.perflib.**\n-dontwarn com.squareup.haha.trove.**\n-dontwarn com.squareup.leakcanary.**\n-keep class com.squareup.haha.** { *; }\n-keep class com.squareup.leakcanary.** { *; }\n# Marshmallow removed Notification.setLatestEventInfo()\n-dontwarn android.app.Notification",
+  "aliasName": "leakcanary 1.5.1"
+}]
