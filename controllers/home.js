@@ -23,14 +23,3 @@ exports.rules = (req, res) => {
     }
   });
 };
-
-
-// exports.rules = (req, res) => {
-//   new Rules({
-//     library: 'okhttp',
-//     rules: '      console.log("Post resposne:"); console.dir(data); console.log(textStatus); console.dir(jqXHR);',
-//   }).save(function(err, rule) {
-//     console.log(rule);
-//     res.json(rule);
-//   });
-// };
