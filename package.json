@@ -12,7 +12,7 @@
     "build": "webpack",
     "start": "node app.js",
     "test": "mocha --reporter spec",
-    "postinstall": "npm rebuild node-sass",
+    "postinstall": "npm rebuild node-sass && webpack",
     "eslint": "eslint **/*.js"
   },
   "dependencies": {
