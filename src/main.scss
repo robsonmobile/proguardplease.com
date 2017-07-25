@@ -1,12 +1,10 @@
 // Libraries
-// @import "~susy/sass/susy";
 @import "~modularscale-sass/stylesheets/_modularscale.scss";
 @import "~sass-bem-constructor/dist/bem-constructor";
 
 // Base
 @import "components/vars"; // Variables
-@import "components/base"; 
-@import "components/grid"; // Grid
+@import "components/base";  // Base
 @import "components/typography"; // Typography
 
 // Components

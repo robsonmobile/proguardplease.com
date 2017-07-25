@@ -12,16 +12,13 @@ $off: #fff;
   max-height: 450px;
   background-color: #490daf;
   position: relative;
-  width: span(1);
+  @include clearfix;
   
   @include modifier('mini'){
     min-height: 380px;
     background-color: #490daf;
     position: relative;
   }
-  
-  @include clearfix;
-  
   
   @include element('box'){
     position: absolute;

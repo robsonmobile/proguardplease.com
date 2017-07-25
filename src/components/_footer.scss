@@ -10,8 +10,7 @@
   }
   
   @include modifier('white') {
-    background-color: #f1f2f5;
-    
+    background-color: #f1f2f5;  
     margin-top: 1.5rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -74,7 +73,9 @@ footer {
   color: rgba(255, 255, 255, 0.37);
 }
 
-.social__icons { padding: 0; }
+.social__icons { 
+  padding: 0;
+}
 
 .social__icon {
   display: inline-block;
@@ -89,16 +90,8 @@ footer {
 
 .footerRight {
   text-align: left;
-  width: span(4);
 }
 
 .footerLeft {
-  width: span(8);
-  text-align: left;
-  // @include span(1 of 1);
-  // text-align: center;
-  // @include susy-breakpoint($bp-xl, $large) {
-  //   @include span(8 of 12 last);
-  //   text-align: left;
-  // }
+  text-align: left;  
 }
