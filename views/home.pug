@@ -1,19 +1,44 @@
 extends layout
 
 block content
-  div.header
-    h1 Proguard, please
-    p.lead Curated list of proguard rules of popular android libraries.
-  hr
-  .row
-    .col
-    form.form-inline
-    .form-group
-      label(for='library') Proguard rules for Library?
-      input#library.form-control(type='text', placeholder='retrofit' value='retrofit')
-    button#search.btn.btn-default(type='submit') Search
-    br
-    .form-group
-      textarea#rules 
-    button.btn(data-clipboard-action='copy', data-clipboard-target='#rules') Copy
-
+  .o-slider--mini
+    .container_mini
+      .o-menu
+        .brand__logo
+          a(href='/')
+            include img/logo.svg
+        a.o-menu__item(href='/')
+      .o-slider__box
+        h1.o-slider__head Proguard Please.
+        p.o-slider__sub Curated list of proguard rules of popular libraries
+  .o-body
+    .container_mini
+      #build.col_full
+          .o-card--search
+            .s__area
+              input.u-input(type='', placeholder='okhttp', name='q')
+              .s__bar
+                .s__bar--label
+                  | Proguard Version
+                .s__bar--version
+                  select(name='', id='')
+                    option(value='1') v1.20.0~
+                    option(value='1') v2.12.x~
+            .s__content
+              span.o-list__heading Popular libaries
+              ul.o-list
+                li.o-list__item
+                  a.o-list__link(href='#') okhttp
+                li.o-list__item
+                  a.o-list__link(href='#') retrofit
+                li.o-list__item
+                  a.o-list__link(href='#') butterknife
+                li.o-list__item
+                  a.o-list__link(href='#') rxjava
+                li.o-list__item
+                  a.o-list__link(href='#') dagger2
+              .s__result
+                textarea.o-list__result(name='result', id='', cols='30', rows='5')
+                  | -dontwarn okio.**
+                  | -dontwarn javax.annotation.Nullable
+                  | -dontwarn javax.annotation.ParametersAreNonnullByDefault
