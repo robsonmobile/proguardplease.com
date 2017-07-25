@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  background-image: url(/bg.png);
+  background-repeat: no-repeat;
+  background-position: right bottom; /*Positioning*/
+  background-repeat: no-repeat; /*Prevent showing multiple background images*/
+  font-family: $font-base; 
+  margin:0;
+}
+
+.container_mini{
+  width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+}
